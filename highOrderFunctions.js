@@ -31,5 +31,3 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 
 // TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
 function filter() {}
-
-
