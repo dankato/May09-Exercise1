@@ -50,3 +50,34 @@ function average(numbers) {
   return avg;
 }
 average([4, 6, 8, 10, 12])
+
+
+//fizzBuzz switch/ multi case(s)
+
+function fizzBuzz(countTo) {
+  for (let num = 1; num <= countTo; num++) {
+    switch (num % 15) {
+
+      case 3:
+      case 6:
+      case 9:
+      case 12:
+        console.log('fizz');
+        break;
+
+      case 5:
+      case 10:
+        console.log('buzz');
+        break;
+
+      case 0:
+        console.log('fizzbuzz');
+        break;
+
+      default:
+        console.log(num);
+    }
+
+  }
+}
+fizzBuzz(15);
