@@ -30,4 +30,24 @@ const filteredNames = filter(myNames, function(name) {
 console.log(filteredNames) // => ['Rich', 'Ray']
 
 // TASK -- DEFINE YOUR FILTER FUNCTION BELOW:
-function filter() {}
+function filter(arr) {
+	var newArray = [];
+	for(let i = 0; i < arr.length; i++){
+		// console.log(arr[i]);
+		if(arr[i][0] === 'R') {
+			//console.log(arr[i]);
+		newArray.push(arr[i]);
+		}
+	}
+	return newArray;
+}
+
+filter(['Rich', 'Joe', 'Bhaumik', 'Ray']);
+// => (2) ["Rich", "Ray"]
+
+
+
+
+
+
+
