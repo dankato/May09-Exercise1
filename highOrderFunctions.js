@@ -61,9 +61,30 @@ filter(['Rich', 'Joe', 'Bhaumik', 'Ray'], function(name) {
 
 
 
+// Functions as return values
+
+function hazardWarningCreator(typeOfWarning) {
+	let warningCounter = 0;
+
+	return function(location) {
+		warningCounter++;
+		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+		console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+	}
+}
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+
+
+rocksWarning('Main St and Pacific Ave');
+
+// DANGER! There is a Rocks on the Road hazard at Main St and Pacific Ave!
+// The Rocks on the Road hazard alert has triggered 1 time(s) today!
 
 
 
 
+// forEach, filter and map
+
+let movements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 
 
