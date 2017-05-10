@@ -59,11 +59,35 @@ filter(['Rich', 'Joe', 'Bhaumik', 'Ray'], function(name) {
 	return name[0] === 'R';
 });
 
+//functions as return values
+
+function hazardWarningCreator(typeOfWarning){
+	let warningCounter = 0;
+	return function(location){
+		warningCounter++;
+		console.log(`Danger! There is a ${typeOfWarning} hazard at ${location}`);
+		console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+
+		}
+		
+	}
 
 
+		const rocksWarning = hazardWarningCreator('Rocks on the Road');
+		const buffaloWarning = hazardWarningCreator('Buffalo on the Road');
+		const waterWarning = hazardWarningCreator('Water on the Road');
+rocksWarning('Denver, C0');
 
 
+//forEach, filter and map
 
+let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+turtleMoves.filter(function(move, i){
+	if(move[0] > 0 && move[1]>0){		//  So either (move[0] > 0 && move[1]>0)
+		return move;	// 	move.forEach
+	}
+})
 
-
-
+turtleMoves.map(function(move){
+	
+})
