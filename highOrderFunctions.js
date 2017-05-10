@@ -68,9 +68,31 @@ function hazardWarningCreator(typeOfWarning){
 		console.log(`Danger! There is a ${typeOfWarning} hazard at ${location}`);
 		console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
 
+<<<<<<< HEAD
 		}
 		
 	}
+=======
+// Functions as return values
+
+function hazardWarningCreator(typeOfWarning) {
+	let warningCounter = 0;
+
+	return function(location) {
+		warningCounter++;
+		console.log(`DANGER! There is a ${typeOfWarning} hazard at ${location}!`);
+		console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} time(s) today!`);
+	}
+}
+const rocksWarning = hazardWarningCreator('Rocks on the Road');
+
+
+rocksWarning('Main St and Pacific Ave');
+
+// DANGER! There is a Rocks on the Road hazard at Main St and Pacific Ave!
+// The Rocks on the Road hazard alert has triggered 1 time(s) today!
+
+>>>>>>> 22dfb08e574712170fa861bdb2e1765ffdcbc42d
 
 
 		const rocksWarning = hazardWarningCreator('Rocks on the Road');
@@ -78,8 +100,13 @@ function hazardWarningCreator(typeOfWarning){
 		const waterWarning = hazardWarningCreator('Water on the Road');
 rocksWarning('Denver, C0');
 
+// forEach, filter and map
 
+<<<<<<< HEAD
 //forEach, filter and map
+=======
+let movements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+>>>>>>> 22dfb08e574712170fa861bdb2e1765ffdcbc42d
 
 let turtleMoves = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 turtleMoves.filter(function(move, i){
